@@ -8,5 +8,23 @@
 <h1>This is a Heading</h1>
 <p>This is a paragraph.</p>
 
+<div id="demo">
+<button type="button" onclick="loadXMLDoc()">Change Content</button>
+</div>
+
+<script>
+function loadXMLDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("POST", "https://data-faker.herokuapp.com/collection", true);
+  xhttp.send('{"amountOfRecords":10,"recordMetadata":{"name":"name","email":"email","website":"url","amount":"currency","phone":"phoneNumber","closeAt":"dateInFuture"}}');
+}
+</script>
+
 </body>
 </html>
