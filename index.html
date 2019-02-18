@@ -15,9 +15,9 @@
 <script>
 function loadXMLDoc() {
   var xhttp = new XMLHttpRequest();
-  xhr.setRequestHeader('Authorization','Bearer 00D0o0000018CbP!AQMAQDpNhRKV0.hDulU0RWgyiE8A73wxc2oZj1HJkDgyQ_T18nEBGOB3a77LP6TBfTmcttM513QdPThwieSDGKZ5l2eUDZB0');
-  xhr.setRequestHeader('Content-type','application/json;charset=UTF-8');
-  xhr.setRequestHeader('Accept','application/json');
+  xhttp.setRequestHeader('Authorization','Bearer 00D0o0000018CbP!AQMAQDpNhRKV0.hDulU0RWgyiE8A73wxc2oZj1HJkDgyQ_T18nEBGOB3a77LP6TBfTmcttM513QdPThwieSDGKZ5l2eUDZB0');
+  xhttp.setRequestHeader('Content-type','application/json;charset=UTF-8');
+  xhttp.setRequestHeader('Accept','application/json');
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       document.getElementById("demo").innerHTML =
