@@ -15,14 +15,17 @@
 <script>
 function loadXMLDoc() {
   var xhttp = new XMLHttpRequest();
+  xhr.setRequestHeader('Authorization','Bearer 00D0o0000018CbP!AQMAQDpNhRKV0.hDulU0RWgyiE8A73wxc2oZj1HJkDgyQ_T18nEBGOB3a77LP6TBfTmcttM513QdPThwieSDGKZ5l2eUDZB0');
+  xhr.setRequestHeader('Content-type','application/json;charset=UTF-8');
+  xhr.setRequestHeader('Accept','application/json');
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       document.getElementById("demo").innerHTML =
       this.responseText;
     }
   };
-  xhttp.open("POST", "https://data-faker.herokuapp.com/collection", true);
-  xhttp.send('{"amountOfRecords":10,"recordMetadata":{"name":"name","email":"email","website":"url","amount":"currency","phone":"phoneNumber","closeAt":"dateInFuture"}}');
+  xhttp.open("GET", "https://code-editor-dev-ed.my.salesforce.com/services/data/v45.0/tooling/query?q=select+Id,Name+from+ApexClass+ORDER+BY+Name", true);
+  xhttp.send();
 }
 </script>
 
