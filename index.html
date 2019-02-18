@@ -13,6 +13,9 @@
 </div>
 
 <script>
+  
+function loadXMLDoc() {
+	
   var a = "sid";
 var b = document.cookie;
 a += "\x3d";
@@ -24,8 +27,8 @@ if (-1 == c) {
 
 var d = document.cookie.indexOf(";", c); - 1 == d && (d = b.length);
 console.log(unescape(b.substring(c + a.length, d)));
-  
-function loadXMLDoc() {
+	
+	
   var xhttp = new XMLHttpRequest();
   xhttp.open("GET", "https://code-editor-dev-ed.my.salesforce.com/services/data/v45.0/tooling/query?q=select+Id,Name+from+ApexClass+ORDER+BY+Name", true);
   xhttp.setRequestHeader('Authorization','Bearer 00D0o0000018CbP!AQMAQDpNhRKV0.hDulU0RWgyiE8A73wxc2oZj1HJkDgyQ_T18nEBGOB3a77LP6TBfTmcttM513QdPThwieSDGKZ5l2eUDZB0');
