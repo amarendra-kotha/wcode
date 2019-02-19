@@ -1,49 +1,256 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Page Title</title>
-</head>
-<body>
+	<head>
+		<title>WCODE</title>
+		<style>
+			body {
+				box-sizing: border-box;
+				font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+				margin: 0px;
+				transition: all 150ms ease 0s;
+			}
+			
+			h1 {
+				display: block;
+				font-size: 2em;
+				margin-block-start: 0.67em;
+				margin-block-end: 0.67em;
+				margin-inline-start: 0px;
+				margin-inline-end: 0px;
+				font-weight: bold;
+			}
+			
+			.h1end, .h2end {
+				font-weight: 400;
+				line-height: 1.25;
+				color: rgb(57, 63, 73);
+				text-align: center;
+				margin: 0px 0px 24px;
+			}
+			
+			.header-main {
+				padding-top: 15px;
+				padding-bottom: 15px;
+			}
+			
+			.header-inner, .questions-section {
+				width: 85%;
+				max-width: 1024px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			
+			.btn {
+				margin-left: 0px;
+				margin-right: 0px;
+				margin-top: 8px;
+				margin-bottom: 8px;
+				padding-left: 24px;
+				padding-right: 24px;
+				padding-top: 16px;
+				padding-bottom: 16px;
+				font-size: 16px;
+				font-weight: 500;
+				line-height: 1.25;
+				color: rgb(255, 255, 255);
+				background-color: rgb(0, 102, 255);
+				text-align: center;
+				font-family: inherit;
+				display: inline-block;
+				vertical-align: middle;
+				-webkit-appearance: none;
+				cursor: pointer;
+				border-radius: 4px;
+				border-width: 0px;
+				border-style: initial;
+				border-color: initial;
+				border-image: initial;
+				text-decoration: none;
+			}
+			
+			.pill {
+				padding-left: 8px;
+				padding-right: 8px;
+				padding-top: 4px;
+				padding-bottom: 4px;
+				font-size: 14px;
+				font-weight: 500;
+				line-height: 1.25;
+				color: rgb(98, 108, 125);
+				background-color: rgb(235, 237, 240);
+				text-align: center;
+				font-family: inherit;
+				display: inline-block;
+				vertical-align: middle;
+				-webkit-appearance: none;
+				margin: 0px 0px 0px 8px;
+				border-radius: 4px;
+				border-width: 0px;
+				border-style: initial;
+				border-color: initial;
+				border-image: initial;
+				text-decoration: none;
+			}
+			
+			.header-links {
+				font-size: 16px;
+				font-weight: 500;
+				color: rgb(57, 63, 73);
+				margin-left: 16px;
+				text-decoration: none;
+			}
+			
+			.footer {
+				padding-top: 64px;
+				padding-bottom: 64px;
+				flex-direction: column;
+				-webkit-box-align: center;
+				align-items: center;
+				display: flex;
+			}
+			
+			.footer a{
+				font-size: 16px;
+				font-weight: 400;
+				color: rgb(57, 63, 73);
+				text-decoration: none;
+			}
+			
+			.hcolor{
+				fill: #FFC0CB;
+				stroke-width: 2px;
+				vertical-align: middle;
+			}
+			
+			.social{
+				padding-top: 30px;
+			}
+			
+			.social a{
+				text-decoration: none;
+				padding: 10px;
+			}
+			
+			.question{
+				font-size: 16px;
+				font-weight: 600;
+				padding-bottom: 30px;
+			}
+			
+			.answer{
+				font-size: 18px;
+			}
+			
+			@media screen and (min-width: 32em)
+			.btn {
+				margin-left: 8px;
+				margin-right: 8px;
+				margin-top: 0px;
+				margin-bottom: 0px;
+			}
+			
+			@media screen and (min-width: 32em)
+			.header-links {
+				margin-left: 24px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header-main">
+			<div class="header-inner">
+				<div style="clear: both;">
+					<div style="float: left;">
+						<div>
+							<a href="/" style="font-size: 28px;font-weight: 600;color: rgb(57, 63, 73);text-decoration: none;vertical-align: sub;">
+								<span style="color:rgb(0, 102, 255);">wc</span>ode
+							</a>
+							<span class="pill">Version 1.0 Comming Soon..</span>
+						</div>
+					</div>
+					<div style="float: right;">
+						<div style="margin-top:1rem;margin-bottom:1rem;">
+							<a href="/" class="header-links">Revisions</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="padding-top: 64px;padding-bottom: 0px;flex-direction: column;-webkit-box-align: center;align-items: center;/*display: flex;*/text-align:center;border-bottom: 1px solid rgb(222, 224, 229);border-color: rgb(222, 224, 229);">
+			<h1 class="h1end">Lightning Web Component Builder</h1>
+			<h2 class="h2end">100% Native Salesforce</h2>
 
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
-
-<div id="demo">
-<button type="button" onclick="loadXMLDoc()">Change Content</button>
-</div>
-
-<script>
-  
-function loadXMLDoc() {
-	
-  var a = "sid";
-var b = document.cookie;
-a += "\x3d";
-var c = b.indexOf("; " + a);
-
-if (-1 == c) {
-	if (c = b.indexOf(a), 0 != c){}
-} else {c += 2;}
-
-var d = document.cookie.indexOf(";", c); - 1 == d && (d = b.length);
-console.log(unescape(b.substring(c + a.length, d)));
-	
-	
-  var xhttp = new XMLHttpRequest();
-  xhttp.open("GET", "https://code-editor-dev-ed.my.salesforce.com/services/data/v45.0/tooling/query?q=select+Id,Name+from+ApexClass+ORDER+BY+Name", true);
-  xhttp.setRequestHeader('Authorization','Bearer 00D0o0000018CbP!AQMAQDpNhRKV0.hDulU0RWgyiE8A73wxc2oZj1HJkDgyQ_T18nEBGOB3a77LP6TBfTmcttM513QdPThwieSDGKZ5l2eUDZB0');
-  xhttp.setRequestHeader('Content-type','application/json;charset=UTF-8');
-  xhttp.setRequestHeader('Accept','application/json');
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("demo").innerHTML =
-      this.responseText;
-    }
-  };
-  
-  xhttp.send();
-}
-</script>
-
-</body>
+			<div style="margin-top: 25px;">
+				<a class="btn" href="javascript:void(0);" target="_blank">Install Package</a>
+			</div>
+			
+			<div class="social" style="margin: 24px 0px 24px;">
+				<a href="javascript:void(0);" target="_blank">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgb(57, 63, 73)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+						</path>
+					</svg>		
+				</a>
+				<a href="javascript:void(0);" target="_blank">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgb(57, 63, 73)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+						<rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle>
+					</svg>
+				</a>
+				<a href="javascript:void(0);" target="_blank">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgb(57, 63, 73)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+					</svg>
+				</a>
+			</div>
+		</div>
+		<div class="questions-section">
+			<div style="text-align: center;padding:25px 0 25px;font-weight: 600;font-size: 20px;">
+				Have something in your mind ?
+			</div>
+			<div class="question">
+				Q: What is "wcode" ?
+				<div style="padding-top: 10px;font-weight: 400;">
+				A: "wcode" is the first online IDE for developing Apex Classes and Lightning Web Components with a blazing speed.
+				</div>
+			</div>
+			<div class="question">
+				Q: Do I need to install any Software/Plugin to use "wcode" ?
+				<div style="padding-top: 10px;font-weight: 400;">
+				A: No Software/Plugin is required to use "wcode".
+				</div>
+			</div>
+			<div class="question">
+				Q: Does "wcode" store any of my data ?
+				<div style="padding-top: 10px;font-weight: 400;">
+				A: As "wcode" is 100% native to Salesforce, stored data is available only in your Salesforce Org.
+				</div>
+			</div>
+			<div class="question">
+				Q: What browsers does "wcode" support ?
+				<div style="padding-top: 10px;font-weight: 400;">
+				A: It is highly recommended to use Latest version of Chrome/Firefox browser.
+				</div>
+			</div>
+			<div class="question">
+				Q: What are usage terms ?
+				<div style="padding-top: 10px;font-weight: 400;">
+				A: "wcode" comes with no warrenty and subject to change/deprecate/no-support at any time.
+				</div>
+			</div>
+			<div class="question">
+				Q: How can i contact ?
+				<div style="padding-top: 10px;font-weight: 400;">
+				A: You can contact "help-wcode@comingsoon.com"
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div>				
+				<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgb(57, 63, 73)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hcolor">
+					<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+				</svg> <a href="https://salesforce.com" target="_blank">Salesforce</a> | 
+				<a href="https://twitter.com/Amarendra_Kotha" target="_blank">By: @Amarendra_Kotha</a>
+			</div>
+		</div>
+	</body>
 </html>
