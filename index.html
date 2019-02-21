@@ -173,6 +173,37 @@
 				margin-block-start: 0em;
 				margin-block-end: 0em;
 			}
+			
+			.screenshot-topframe {
+				/*position: absolute;
+				top: -20px;*/
+				width: 100%;
+				height: 20px;
+				background-color: #EBEBEB;
+				border-top-right-radius: 5px;
+				border-top-left-radius: 5px;
+				padding: 0 7px;
+			}
+			
+			.screenshot-frame-button {
+				border-radius: 50%;
+				width: 7px;
+				height: 7px;
+				float: left;
+				margin: 7px 3px;
+			}
+			
+			.screenshot-topframe .screenshot-frame-button:nth-child(1) {
+				background-color: #FF6059;
+			}
+			
+			.screenshot-topframe .screenshot-frame-button:nth-child(2) {
+				background-color: #FFBE2F;
+			}
+			
+			.screenshot-topframe .screenshot-frame-button:nth-child(3) {
+				background-color: #28C940;
+			}
 
 			/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 			@media screen and (max-width: 600px) {
@@ -235,6 +266,14 @@
 					</svg>		
 				</a>
 			</div>
+			
+			<div class="header-inner">
+				<div class="screenshot-topframe">
+					<div class="screenshot-frame-button"></div>
+					<div class="screenshot-frame-button"></div>
+					<div class="screenshot-frame-button"></div>
+				</div>
+			</div>
 		</div>
 		<div style="border-bottom: 1px solid rgb(222, 224, 229);border-color: rgb(222, 224, 229);">
 			<div style="text-align: center;padding:25px 0 25px;font-weight: 600;font-size: 20px;">
@@ -246,13 +285,13 @@
 						Development
 					</div>
 					<!--<div style="border-bottom: 2px solid rgb(0, 102, 255);"></div>-->
-					<p style="line-height: 30px;margin-left: 3em;margin-right: 3em;">
+					<p style="text-align: -webkit-center;line-height: 30px;margin-left: 3em;margin-right: 3em;">
 						With <b><span style="color:rgb(0, 102, 255);">wc</span>ode</b> you can Create/Edit Lightning Web Components and Apex Classes direct to Salesforce with a blazing speed.
 					</p>
 				</div>
 				<div class="column">
 					<div class="fheading">Preview</div>
-					<p style="line-height: 30px;margin-left: 3em;margin-right: 3em;">Simulate the output/user experience (with data from Salesforce) right from <span style="color:rgb(0, 102, 255);">wc</span>ode.</p>
+					<p style="text-align: -webkit-center;line-height: 30px;margin-left: 3em;margin-right: 3em;">Simulate the output/user experience (with data from Salesforce) right from <span style="color:rgb(0, 102, 255);">wc</span>ode.</p>
 				</div>
 			</div>
 		</div>
